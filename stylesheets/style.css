@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.theleft{
+    background-color: lightseagreen;
+}
+.myimgdiv{
+    text-align: center
+}
+.myimg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 30px
+}
+.myability{
+    margin-top: 320px;
+}
+.thelabel{
+    font-size: large;
+}
+.myself{
+    margin-top: 600px;
+}
+p{
+    font-size: 20px;
+}
+.theother{
+    font-size: 25px;
+}
+.myphone{
+    margin-top: 50px;
+    color: #ffffff;
+    margin-bottom: 150px;
+}
+.theinfo{
+    width: 70%;
+    margin: 0 auto;
+}
+.mytitle{
+    color: lightseagreen;
+    font-weight: bold;
+}
+.theright{
+    padding: 20px 20px;
+}
+.myjob{
+    font-size: 20px;
+    margin: 10px 0;
+    color: #000000;
+}
+.myitem{
+    margin:50px 0;
+}
