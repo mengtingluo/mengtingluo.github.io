@@ -1,55 +1,307 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-.theleft{
+
+.contianer {
+    width: 100%;
+    height: 800px;
     background-color: lightseagreen;
 }
-.myimgdiv{
-    text-align: center
+
+.thefirstbody {
+    text-align: center;
 }
-.myimg{
-    width: 150px;
-    height: 150px;
+
+.blank {
+    height: 200px;
+}
+
+.myface {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin: 30px
+    border: 15px solid #aee2d9;
+    animation: turnup 2s;
+    -webkit-animation: turnup 2s;
 }
-.myability{
-    margin-top: 320px;
+
+@keyframes turnup {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 200px;
+    }
 }
-.thelabel{
-    font-size: large;
+
+@-webkit-keyframes turnup {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 200px;
+    }
 }
-.myself{
-    margin-top: 600px;
+
+.title {
+    font-family: cursive;
+    font-size: 50px;
+    color: white;
+    margin-top: 30px;
 }
-p{
+
+.describe1 {
+    font-size: 20px;
+    color: white;
+    opacity: 0.5;
+    margin-top: 20px;
+}
+
+.describe2 {
+    margin-top: 20px;
+    color: white;
+    font-family: cursive;
     font-size: 20px;
 }
-.theother{
-    font-size: 25px;
+
+.myemail {
+    font-size: 20px;
+    margin-top: 30px;
+    color: chartreuse;
+    cursor: default;
 }
-.myphone{
-    margin-top: 50px;
-    color: #ffffff;
-    margin-bottom: 150px;
+
+.myemail:hover {
+    background-color: cadetblue;
 }
-.theinfo{
-    width: 70%;
+
+.tips {
+    margin-top: 20px;
+    color: white;
+    font-size: 40px;
+}
+
+.blank2 {
+    height: 150px;
+}
+
+.thesecondbody {
+    width: 80%;
     margin: 0 auto;
 }
-.mytitle{
-    color: lightseagreen;
-    font-weight: bold;
+
+.s {
+    color: white;
+    font-family: fantasy;
+    text-decoration: none;
 }
-.theright{
-    padding: 20px 20px;
+
+.s1 {
+    font-size: 50px;
+    margin: 60px;
+    animation: theopacitychange 8s infinite;
+    -webkit-animation: theopacitychange 8s infinite;
 }
-.myjob{
-    font-size: 20px;
-    margin: 10px 0;
-    color: #000000;
+
+.s2 {
+    font-size: 30px;
+    margin: 30px 20px;
+    animation: theopacitychange2 4s infinite;
+    -webkit-animation: theopacitychange2 4s infinite;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
 }
-.myitem{
-    margin:50px 0;
+
+.s3 {
+    font-size: 90px;
+    margin: 30px 20px;
+    animation: theopacitychange 3s infinite;
+    -webkit-animation: theopacitychange 3s infinite;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+.s4 {
+    font-size: 60px;
+    margin: 50px;
+    animation: theopacitychange2 5s infinite;
+    -webkit-animation: theopacitychange2 5s infinite;
+}
+
+.s5 {
+    font-size: 100px;
+    margin: 30px;
+    animation: theopacitychange3 2s infinite;
+    -webkit-animation: theopacitychange3 2s infinite;
+}
+
+.s6 {
+    font-size: 100px;
+    margin: 30px;
+
+}
+
+.s7 {
+    font-size: 40px;
+    margin: 30px;
+    animation: theopacitychange3 3s infinite;
+    -webkit-animation: theopacitychange3 3s infinite;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+.s8 {
+    font-size: 80px;
+    margin: 30px;
+    animation: theopacitychange 5s infinite;
+    -webkit-animation: theopacitychange 5s infinite;
+    animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+}
+
+.s9 {
+    font-size: 30px;
+    margin: 30px;
+    animation: theopacitychange2 2s infinite;
+    -webkit-animation: theopacitychange2 2s infinite;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+@keyframes theopacitychange {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes theopacitychange {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes theopacitychange2 {
+    0% {
+        opacity: 0.1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@-webkit-keyframes theopacitychange2 {
+    0% {
+        opacity: 0.1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes theopacitychange3 {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@-webkit-keyframes theopacitychange3 {
+    0% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.thethirdbody {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.thethirdbody h1 {
+    color: white;
+    font-size: 50px;
+    letter-spacing: 20px;
+}
+
+.myphotodiv {
+    width: 25%;
+    float: left;
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+}
+
+.myphotodiv img {
+    width: 100%;
+}
+
+.hidediv {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+}
+
+.hidediv:hover {
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+}
+
+.hidediv p {
+    color: white;
+    position: absolute;
+    left: 35%;
+    top: 45%;
+}
+
+@-webkit-keyframes nohide {
+    0% {
+        width: 100%;
+        height: 170px;
+    }
+    50% {
+        width: 0;
+        height: 170px;
+    }
+    100% {
+        width: 100%;
+        height: 170px;
+    }
+}
+
+.nohide {
+    -webkit-animation: nohide 2s;
 }
