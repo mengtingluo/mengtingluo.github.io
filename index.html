@@ -13,18 +13,18 @@
     <script src="mystyle.js"></script>
 </head>
 <body>
-    <div class="leftdiv">
-       <div class="lefthead">
-           <a href="#"><img src="noun_17050_cc.png"></a>
+    <div class="leftdiv"><!--左边部分-->
+       <div class="lefthead"><!--回到首页的小屋子-->
+           <a href="#"><img class="theshowimg" src="noun_17050_cc.png"><img class="thehideimg" src="noun_17050_cc1.png"></a>
        </div>
-        <div class="leftguide">
+        <div class="leftguide"><!--左边的导航栏-->
             <ul>
                 <li><a href="#" id="lefta1"><img src="mission.png"><span class="main-item">Mission</span><span class="sub-item">Know what i'm up to</span></a></li>
                 <li><a href="#" id="lefta2"><img src="play.png"><span class="main-item">Play</span><span class="sub-item">See what i like to do</span> </a></li>
                 <li><a href="#" id="lefta3"><img src="touch.png"><span class="main-item">Touch</span><span class="sub-item">How to get in touch</span></a></li>
             </ul>
         </div>
-        <div class="touchme">
+        <div class="touchme"><!--各个联系方式-->
             <ul>
                 <li><a href="#"><img src="icoPNG/bubbles.png"><img class="img2" src="icoPNG/bubbles1.png"></a></li>
                 <li><a href="#"><img src="icoPNG/facebook.png"><img class="img2" src="icoPNG/facebook1.png"></a></li>
@@ -36,22 +36,26 @@
         </div>
         <footer>@2015metaluo的个人网站</footer>
     </div>
-    <div class="rightdiv">
-        <div class="guide">
+    <div class="rightdiv"><!--右边部分-->
+        <div class="guide"><!--右边大的导航标志-->
             <div class="link">
                 <span class="ico ico1">
                 </span>
                 <div class="box">
-                    <a class="button" href="#"><span class="mainname">MISSION</span><span class="sub-name"></span>
+                    <a class="button" href="#" data-title="My mission is clear"><span class="mainname">MISSION</span><span class="sub-name"></span>
                     <span class="topbox"></span><span class="leftbox"></span><span class="bottombox"></span><span class="rightbox"></span>
                     </a>
+                </div>
+                <div class="tooltip">
+                    <em></em>
+                    <span></span>
                 </div>
             </div>
             <div class="link">
                 <div class="ico ico2">
                 </div>
                 <div class="box">
-                    <a class="button" href="#"><span class="mainname">PLAY</span><span class="sub-name"></span>
+                    <a class="button" href="#" data-title="This is my playground"><span class="mainname">PLAY</span><span class="sub-name"></span>
                         <span class="topbox"></span><span class="leftbox"></span><span class="bottombox"></span><span class="rightbox"></span></a>
                 </div>
             </div>
@@ -59,10 +63,14 @@
                 <div class="ico ico3">
                 </div>
                 <div class="box">
-                    <a class="button" href="#"><span class="mainname">TOUCH</span><span class="sub-name"></span>
+                    <a class="button" href="#" data-title="Lets do somthing together"><span class="mainname">TOUCH</span><span class="sub-name"></span>
                         <span class="topbox"></span><span class="leftbox"></span><span class="bottombox"></span><span class="rightbox"></span></a>
                 </div>
             </div>
+        </div>
+        <div class="bigtitle">
+            <a href="#"><h1>Image,create,enjoy</h1>
+            <p>Let me show you now</p></a>
         </div>
     </div>
 </body>
