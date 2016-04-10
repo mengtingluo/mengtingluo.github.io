@@ -1,21 +1,29 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body,html{
     width: 100%;
     height: 100%;
-    background: url("425430.jpg");
+}
+body{
+    background: url("background.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
 }
 .leftdiv{
     width: 240px;
     height: 100%;
-    float: left;
+    left: 0;
+    top:0;
     background-color:#2D2D2D;
-    position: relative;
+    position: fixed;
+    z-index: 1;
 }
 .lefthead{
   width: 30%;
+  z-index: 1;
     margin: 80px auto;
     position: relative;
     transition:all 0.5s;
@@ -34,6 +42,7 @@ body,html{
     left: 0;
     top: 0;
     opacity: 0;
+    z-index: 2;
     transition: all 0.5s;
     -o-transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -74,8 +83,8 @@ body,html{
     margin: 10px 15px;
     transition:all 0.5s;
     -webkit-transition: all 0.5s;
-    -o-transition:all 0.5s
-    -moz-transition:all 0.5s
+    -o-transition:all 0.5s;
+    -moz-transition:all 0.5s;
 }
 .leftguide a:hover img{
     transform: rotate(360deg);
@@ -147,24 +156,34 @@ footer{
     bottom: 20px;
 }
 .rightdiv{
-     max-width: 100%;
+     width: 100%;
      height: 100%;
-     float: left;
     position: relative;
+    padding-left:240px;
+ }
+ .rightdiv-container{
+    width: 100%;
+    padding-left: 240px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform:translate(-50%, -50%);
+    -moz-transform:translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -safari-transform: translate(-50%, -50%);
  }
 .guide{
     width: 100%;
     height: 220px;
-     margin-top: 30%;
-    margin-left: 35%;
     text-align: center;
  }
 .link{
     width:180px;
     height: 220px;
-    float: left;
     margin-right: 100px;
     position: relative;
+    display: inline-block;
 }
 .ico{
 display: block;
@@ -309,7 +328,7 @@ display: block;
     margin: 0 auto;
     white-space: nowrap;
     opacity: 0;
-    z-index: 100;
+    z-index: 3;
 }
 .tooltip em{
     font-style: normal;
@@ -326,9 +345,7 @@ display: block;
     bottom:-14px;
 }
 .bigtitle{
-    width: 500px;
-    margin-left: 35%;
-    margin-top: 7%;
+    text-align: center;
 }
 .bigtitle a{
     text-decoration: none;
@@ -343,4 +360,28 @@ display: block;
     font-size: 35px;
     font-family: arial, helvetica, sans-serif;
 }
-
+/* 我的爱好 */
+.playGround-rightdiv{
+    background-color: #ffffff;
+}
+.playGround-rightdiv>ul{
+    width: 100%;
+    padding: 10px 20px 10px 260px;
+    list-style: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+}
+.playGround-rightdiv>ul>li{
+    width: 100%;
+    border:1px solid lightgrey;
+    padding: 5px;
+    margin:5px;
+    box-shadow: 0 0 5px lightgrey;
+}
+.habit-title{
+    font-size: 20px;
+    font-family: Microsoft Yahei;
+    border-bottom: 1px dotted lightgrey;
+    text-align: center;
+}
