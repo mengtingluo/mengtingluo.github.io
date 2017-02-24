@@ -1,0 +1,116 @@
+<!--by metaluo-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>右键菜单</title>
+    <style type="text/css">
+        #title {
+            width: 800px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #eee;
+            font-size: 30px;
+            padding: 100px 30px;
+        }
+
+        #menu {
+            width: 300px;
+            line-height: 40px;
+            border: 2px solid #ccc;
+            border-radius: 3px;
+            font-size: 25px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #fff;
+        }
+
+        #menu ul {
+            list-style: none;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id='title'>right click to see the menu</div>
+<div id='menu' class="hide">
+    <ul>
+        <li>Menu Item 1</li>
+        <li>Menu Item 2</li>
+    </ul>
+</div>
+<script type="text/javascript">
+    window.utils = {};
+    //捕获坐标
+    window.utils.captureMouse = function (element, event) {
+        var mouse = {x: 0, y: 0};
+        var x, y;
+        if (event.pageX || event.pageY) {
+            x = event.pageX;
+            y = event.pageY;
+        } else {
+            x = event.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+            y = event.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+        }
+        mouse.x = x;
+        mouse.y = y;
+        return mouse;
+    };
+    window.utils.distance = function (element, e, target) {
+        var p,
+                w = element.clientWidth,
+                h = element.clientHeight,
+                x = utils.captureMouse(element, e).x,
+                y = utils.captureMouse(element, e).y,
+                tw = target.clientWidth,
+                th = target.clientHeight;
+        if (x + tw >= w && y + th >= h && y >= th) {
+            p = 1;
+        } else if (x + tw < w && y + th >= h && y >= th) {
+            p = 2;
+        } else if (x + tw >= w && y + th < h) {
+            p = 3;
+        } else if (x + tw >= w && y + th >= h && y < th) {
+            p = 5
+        } else {
+            p = 4;
+        }
+        return p
+    };
+
+    document.getElementById('title').addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        var
+                title = document.getElementById('title'),
+                menu = document.getElementById('menu'),
+                mouse = utils.captureMouse(title, e),
+                x = mouse.x,
+                y = mouse.y;
+        menu.style.left = x + 'px';
+        menu.style.top = y + 'px';
+        menu.className = '';
+        var p = utils.distance(title, e, menu);
+        if (p === 1) {
+            menu.style.left = x - menu.clientWidth + 'px';
+            menu.style.top = y - menu.clientHeight + 'px';
+        } else if (p === 2) {
+            menu.style.left = x + 'px';
+            menu.style.top = y - menu.clientHeight + 'px';
+        } else if (p === 3) {
+            menu.style.left = x - menu.clientWidth + 'px';
+            menu.style.top = y + 'px';
+        } else if (p === 5) {
+            menu.className = 'hide';
+            alert('这边让我很为难0.0');
+        } else {
+            menu.style.left = x + 'px';
+            menu.style.top = y + 'px';
+        }
+    })
+</script>
+</body>
+</html>
